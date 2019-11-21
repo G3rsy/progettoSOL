@@ -1,9 +1,21 @@
 # Gabriele Sergi
 #matrcicola 532362
+CC = gcc
+
+CFLAGS = -Wall -pedantic -fsanitize=address -o2 -fno-omit-frame-pointer -std=gnu99
+
+.PHONY:	all clean cleanall test
+
+server.o: server.c include.h
+
+client.o: client.c include.h
+
+supervisor.o: supervisor.c include.h
+
 all:
-	gcc -pthread server.c -Wall -pedantic -fsanitize=address -o2 -fno-omit-frame-pointer -std=gnu99 -o server.o
-	gcc client.c -Wall -pedantic -fsanitize=address -o2 -fno-omit-frame-pointer -std=gnu99 -o client.o
-	gcc -pthread supervisor.c -Wall -pedantic -fsanitize=address -o2 -fno-omit-frame-pointer -std=gnu99 -o supervisor.o
+	$(CC) -pthread server.c  $(CFLAGS) -o server.o
+	$(CC) client.c $(CFLAGS) -o client.o
+	$(CC) -pthread supervisor.c $(CFLAGS) -o supervisor.o
 
 clean:
 	rm -f OOB* *.o
