@@ -1,5 +1,3 @@
-# Gabriele Sergi
-#matrcicola 532362
 CC = gcc
 
 CFLAGS = -Wall -pedantic -fsanitize=address -o2 -fno-omit-frame-pointer -std=gnu99
