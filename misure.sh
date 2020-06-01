@@ -1,6 +1,4 @@
 #!/bin/bash
-# Gabriele Sergi
-#matricola 532362
 exec 3<logClient
 
 i=0

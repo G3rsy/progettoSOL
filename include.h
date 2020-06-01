@@ -1,6 +1,3 @@
-//Gabriele Sergi
-//matricola 532362
-
 #include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
@@ -67,13 +64,6 @@ typedef struct lista{
 
 	struct lista* next;
 }list;
-
-/*
-typedef struct tim{
-	struct timespec val;
-	struct tim* next;
-}mineTime;
-*/
 
 
 //--------------------------------------

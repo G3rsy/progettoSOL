@@ -1,6 +1,3 @@
-//Gabriele Sergi
-//matricola 532362
-
 #include "include.h"
 
 void* thread_function(void* arg);

@@ -1,6 +1,3 @@
-//Gabriele Sergi
-//matricola 532362
-
 #define _GNU_SOURCE
 #include "include.h"
 
@@ -89,6 +86,7 @@ int main(int argc, char* argv[]){
 		if(pipe(son[i].fd) == -1){
 			printf("error");
 		}else{
+			printf("pipe dimension %d\n", _POSIX_PIPE_BUF);
 			if( !(n = fork()) ){
 				//chiudo la pipe in lettura
 				close(son[i].fd[0]);
@@ -159,7 +157,7 @@ int main(int argc, char* argv[]){
 			}
 
 		}
-			
+		
 		fflush(NULL);
 		i = (i+1)%k;
 		pthread_yield();

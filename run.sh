@@ -1,6 +1,4 @@
 #!/bin/bash
-# Gabriele Sergi
-#matricola 532362
 ./supervisor.o 8 > >(tee logSuper) &
 x=$!
 sleep 1
